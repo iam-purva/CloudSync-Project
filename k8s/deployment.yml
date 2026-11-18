@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudsync-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cloudsync-app
+  template:
+    metadata:
+      labels:
+        app: cloudsync-app
+    spec:
+      containers:
+      - name: cloudsync-container
+        image: clouddevps/cloudsync:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+
