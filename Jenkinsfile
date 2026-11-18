@@ -57,16 +57,24 @@ pipeline {
             }
         }
 
-        stage('Deploy to EKS') {
-            steps {
-                sh '''
-                    kubectl apply -f ${K8S_DIR}/ --validate=false
+        
+stage('Deploy to EKS') {
+    steps {
+        withCredentials([[
+            $class: 'AmazonWebServicesCredentialsBinding',
+            credentialsId: 'aws-cred'
+        ]]) {
+            sh '''
+                export AWS_DEFAULT_REGION=${AWS_REGION}
 
-                    kubectl set image deployment/cloudsync-deployment \
-                        cloudsync-container=${DOCKER_IMAGE}:${IMAGE_TAG}
+                kubectl apply -f ${K8S_DIR}/ --validate=false
 
-                    kubectl rollout status deployment/cloudsync-deployment
-                '''
+                kubectl set image deployment/cloudsync-deployment \
+                    cloudsync-container=${DOCKER_IMAGE}:${IMAGE_TAG}
+
+                kubectl rollout status deployment/cloudsync-deployment
+            '''
+     
             }
         }
     }
