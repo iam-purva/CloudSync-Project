@@ -20,16 +20,16 @@ Workflow
 
 
 3. Technologies Used:
- 
-Category	            Tools
-
-Cloud	               AWS (EC2, EKS, IAM)
-CI/CD	               Jenkins
-Version Control	   Git, GitHub
+```                 
+Category	           Tools
+Cloud	                   AWS (EC2, EKS, IAM)
+CI/CD	                   Jenkins
+Version Control	           Git, GitHub
 Containerization	   Docker
-Container Registry	Docker Hub
-Orchestration	      Kubernetes
-Web Server	         Apache
+Container Registry	   Docker Hub
+Orchestration	           Kubernetes
+Web Server	           Apache
+```                 
 
 4. Project Structure:
 ``` 
