@@ -13,7 +13,7 @@ Workflow
 - Jenkins builds the Docker image.
 - Docker image is pushed to Docker Hub.
 - Jenkins connects to the AWS EKS cluster.
-- ubernetes deploys the updated application.
+- kubernetes deploys the updated application.
 - AWS LoadBalancer exposes the application to end users.
 
    <img width="1262" height="732" alt="CloudSync - Architecture" src="https://github.com/user-attachments/assets/df2b0d10-0be9-4fae-8c0d-f5a68c709dfb" />
@@ -21,14 +21,14 @@ Workflow
 
 3. Technologies Used:
  
-Category	           Tools
+Category	            Tools
 
 Cloud	               AWS (EC2, EKS, IAM)
 CI/CD	               Jenkins
-Version Control	     Git, GitHub
+Version Control	   Git, GitHub
 Containerization	   Docker
-Container Registry	 Docker Hub
-Orchestration	       Kubernetes
+Container Registry	Docker Hub
+Orchestration	      Kubernetes
 Web Server	         Apache
 
 4. Project Structure:
