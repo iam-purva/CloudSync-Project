@@ -79,7 +79,8 @@ The application is deployed on Amazon EKS using Kubernetes.
 - Service: Exposes the application using AWS LoadBalancer.
 
 
-<img width="1126" height="973" alt="CloudSync - EKS Deployment" src="https://github.com/user-attachments/assets/bc40a7fd-5055-4945-9321-084efa45d7f4" />
+<img width="1919" height="518" alt="CloudSync - Objects" src="https://github.com/user-attachments/assets/bb456326-9595-47d1-b7eb-431e5196fc8f" />
+
 
 
 
